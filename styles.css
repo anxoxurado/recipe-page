@@ -67,7 +67,6 @@ h2 {
 .nutricion {
     margin: 1em 0;
     padding: 1em;
-    border-radius: 0.5em;
 }
 
 .nutricion table {
@@ -92,7 +91,8 @@ footer {
 }
 
 /* Mobile Styles */
-@media (max-width: 376px) {
+/* El ejercicio dice que a 375px pero la mayoria de los celulares rondan los 425px*/
+@media (max-width: 426px) {
     .container {
         padding: 2em;
         margin: 0;
@@ -101,10 +101,16 @@ footer {
         margin: 1em 0;
         padding: 0.5em;
     }
+
+    .main-image {
+        width: 100vw;
+        margin: -2em -2em 2em -2em;
+        border-radius: 0;
+    }
 }
 
 /* Desktop Styles */
-@media (min-width: 1439px) {
+@media (min-width: 1440px) {
     .container {
         max-width: 800px;
         padding: 5em;
