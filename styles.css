@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -76,21 +76,10 @@ h2 {
     margin-top: 1em;
 }
 
-.nutricion th,
 .nutricion td {
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     padding: 0.5em;
     text-align: justify;
-}
-
-.nutricion th {
-    background-color: #f96161;
-    color: #fff;
-}
-
-.nutricion td {
-    background-color: #fff;
-    color: #333;
 }
 
 footer {
@@ -100,4 +89,24 @@ footer {
     text-align: center;
     width: 100%;
     bottom: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 376px) {
+    .container {
+        padding: 2em;
+        margin: 0;
+    }
+    .preparacion, .nutricion {
+        margin: 1em 0;
+        padding: 0.5em;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1439px) {
+    .container {
+        max-width: 800px;
+        padding: 5em;
+    }
 }
