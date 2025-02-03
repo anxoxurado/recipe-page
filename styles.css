@@ -173,3 +173,13 @@ footer {
         padding: 4em;
     }
 }
+
+.easter-egg {
+    display: flex;
+    position: relative;
+    justify-self: center;   
+    align-self: center;
+    padding: auto;
+    border-radius: 0.5em;
+    margin: auto;
+}
