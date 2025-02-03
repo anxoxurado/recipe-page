@@ -28,16 +28,16 @@ header {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 550px;
     margin: 0 auto 5em auto;
-    padding: 5em;
+    padding: 4em;
     background-color: #fff;
-    border-radius: 0.5em;
+    border-radius: 2em;
 }
 
 .main-image {
     width: 100%;
-    border-radius: 0.5em;
+    border-radius: 1em;
 }
 
 h1,
@@ -50,18 +50,70 @@ h2 {
     color: hsl(14, 45%, 36%);
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+ul li::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: list-counter;
+}
+
+ol li {
+    counter-increment: list-counter;
+    margin-bottom: 0.5em;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+ol li::before {
+    content: counter(list-counter) ".";
+    position: absolute;
+    left: 0;
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+.ingredientes {
+    margin: 2.5em 0;
+}
+
 .preparacion {
     background-color: hsl(330, 100%, 98%);
     border-radius: 0.5em;
     padding: 0.5em;
-    margin: 1em 2em;
+    margin: 2.5em 0;
 }
 
 .preparacion h2 {
     margin: 0;
     padding: 0.5em;
-    border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.5em;
     color: hsl(332, 51%, 32%);
+}
+
+.preparacion ul {
+    margin: 0 1.5em;
+}
+
+.instrucciones {
+    margin: 2em 0;
 }
 
 .nutricion {
@@ -81,6 +133,11 @@ h2 {
     text-align: justify;
 }
 
+.nutricion td:last-child {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
 footer {
     background-color: #333;
     color: #fff;
@@ -90,7 +147,7 @@ footer {
     bottom: 0;
 }
 
-/* Mobile Styles */
+/* Movil Styles */
 /* El ejercicio dice que a 375px pero la mayoria de los celulares rondan los 425px*/
 @media (max-width: 426px) {
     .container {
@@ -113,6 +170,6 @@ footer {
 @media (min-width: 1440px) {
     .container {
         max-width: 800px;
-        padding: 5em;
+        padding: 4em;
     }
 }
